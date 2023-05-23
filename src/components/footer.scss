@@ -1,0 +1,47 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 100px;
+    line-height: 30px;
+    .text-muted {
+        text-align: center;
+    }
+    .footer-btn {
+        background-color: #626262;
+        color: #fff;
+        border-radius: 10px;
+        border: 2px solid #626262;
+        padding: 0px 20px;
+        &:hover {
+            background-color: #979595;
+        }
+    }
+    textarea {
+        width: 100%;
+        background-color: #000;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid #626262;
+    }
+    input {
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        margin-left: 20px;
+        width: calc(100% - 90px);
+    }
+    .input-wrap {
+        border-radius: 0;
+        border-bottom: 2px solid #626262;
+        background-color: #000;
+    }
+    @media only screen and (max-width: 848px) {
+        padding: 50px;
+        .form-div {
+            width: 100% !important;
+        }
+    }
+    @media only screen and (max-width: 548px) {
+        padding: 20px;
+    }
+}
