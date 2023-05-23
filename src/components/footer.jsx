@@ -6,7 +6,7 @@ import "./footer.scss";
 
 const Footer = () => {
   const [mobileNumber, setMobileNumber] = useState("");
-  const [country, setCountry] = useState("");
+//   const [country, setCountry] = useState("");
   const [requirement, setRequirement] = useState("");
 
   const handleSubmit = (e) => {
