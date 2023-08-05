@@ -6,6 +6,10 @@
     .text-muted {
         text-align: center;
     }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
     .footer-btn {
         background-color: #626262;
         color: #fff;
@@ -22,6 +26,7 @@
         border: none;
         border-radius: 0;
         border-bottom: 2px solid #626262;
+        color: #fff;
     }
     input {
         border: none;

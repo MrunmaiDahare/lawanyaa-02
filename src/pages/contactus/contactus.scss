@@ -1,0 +1,97 @@
+// contactus.scss
+.contact-us {
+    margin-top: 150px;
+    // background-color: #f9f9f9;
+    padding: 40px 0;
+    .line-1 {
+        width: 100%;
+        height: auto;
+        background-color: lightgray;
+        opacity: 1;
+        height: 1.5px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // max-width: 800px;
+        margin: 0 auto;
+    }
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+        // color: #333;
+    }
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        .contact-details {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            .contact-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                svg {
+                    margin-right: 10px;
+                    // color: #555;
+                }
+                p {
+                    margin: 0;
+                    // color: #555;
+                }
+            }
+        }
+        .map-container {
+            width: 50%;
+            flex: 1;
+            img {
+                width: 450px;
+            }
+        }
+    }
+    .contact-form {
+        width: 100%;
+        padding: 20px;
+        border-radius: 4px;
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            // color: #333;
+        }
+        form {
+            .form-group {
+                margin-bottom: 20px;
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 14px;
+                }
+                textarea {
+                    height: 120px;
+                }
+            }
+            button[type="submit"] {
+                padding: 10px 20px;
+                background-color: rgb(0, 0, 63);
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                &:hover {
+                    background-color: rgb(0, 0, 63, 75);
+                }
+            }
+        }
+    }
+}

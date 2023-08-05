@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { FaMapMarkedAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
 import { AiFillMail } from "react-icons/ai";
 import "./footer.scss";
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   const [mobileNumber, setMobileNumber] = useState("");
-  const [country, setCountry] = useState("");
+  // const [country, setCountry] = useState("");
   const [requirement, setRequirement] = useState("");
 
   const handleSubmit = (e) => {
@@ -21,11 +21,21 @@ const Footer = () => {
           <div className="col-md-4">
             <h4>Our Company</h4>
             <ul>
-              <li>About Us</li>
-              <li>Terms and Policy</li>
-              <li>FAQ</li>
-              <li>Delivery and Tracking Policy</li>
-              <li>Payment Policy</li>
+            <li>
+          <Link to='/about-us'>About Us</Link>
+        </li>
+        <li>
+          <Link to='/terms-and-conditions'>Terms and Policy</Link>
+        </li>
+        <li>
+          <Link to='/faq'>FAQ</Link>
+        </li>
+        <li>
+          <Link to='/delivery-tracking-policy'>Delivery and Tracking Policy</Link>
+        </li>
+        <li>
+          <Link to='/payment-policy'>Payment Policy</Link>
+        </li>
             </ul>
           </div>
           <div className="col-md-4">
@@ -43,7 +53,7 @@ const Footer = () => {
             </p>
             <p>
               <span className="icon">
-                <FaMapMarkedAlt />
+                <FaMapMarkerAlt/>
               </span>
               Office Address: <br />
               Raghuji Nagar, Bhosalewada, Behind Chota Tajbag

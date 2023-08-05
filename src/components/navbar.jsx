@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import "./navbar.scss";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { AiOutlineShop } from "react-icons/ai";
 import {
-  BsReverseLayoutSidebarReverse,
+  BsCart,
   BsSearch,
   BsThreeDots,
 } from "react-icons/bs";
@@ -14,6 +14,10 @@ import {
 } from "react-icons/fi";
 import { BsWhatsapp } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
+import { IoIosCall } from "react-icons/io";
+import { SiTrustpilot } from "react-icons/si";
+import Flag from "../assets/icons/flag.png";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -38,27 +42,37 @@ const Navbar = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
+
+ 
+
+
+
   return (
     <>
+ 
       <nav className="nav-web">
+      <div className="small-nav-top"><p style={{display:"flex", gap:"10px"}}>Shipping All Over India <img src={Flag} alt="Indian Flag" /></p><p>Get Quotation Now <SiTrustpilot/> </p><p><IoIosCall/> +91 820 831 XXXX</p>
+          </div>
         <div className="nav-container">
-          <h1 className="nav-logo">Lawanyaa</h1>
+          <h1 className="nav-logo"><Link to="/">Lawanyaa</Link></h1>
           <ul className="nav-menu">
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/">About</a>
+              <Link to="/about-us">About</Link>
             </li>
             <li>
-              <a href="/">Shop</a>
+              <Link to="/products"> Shop</Link>
               
             </li>
             <li>
-              <a href="/">Catalogue</a>
+              <Link to="/catalogue">Catalogue</Link>
             </li>
             <li>
-              <a href="/">Contact</a>
+              <Link to="/contactus">Contact</Link>
             </li>
           </ul>
           <div className="nav-button">
@@ -68,10 +82,11 @@ const Navbar = () => {
             >
               <BsSearch />
             </button>
+            <Link to="/cart">
             <button className="btn btn-search nav-icon">
-              <BsReverseLayoutSidebarReverse />
-            </button>
-            <button className="btn btn-login">Login</button>
+              <BsCart />
+            </button></Link>
+            <Link to="/login"><button className="btn btn-login">Login</button></Link>
             <button className="btn btn-signup" style={{ marginLeft: "15px" }}>
               Signup
             </button>
@@ -87,9 +102,6 @@ const Navbar = () => {
                 aria-label="Recipient's username"
                 aria-describedby="basic-addon2"
               />
-              {/* <span class="input-group-text search-icon-small-nav" id="basic-addon2">
-                <BsSearch />
-              </span> */}
               <button className=" input-group-text search-icon-small-nav" onClick={handleSearchClose}>
               <RxCross1 />
             </button>

@@ -9,6 +9,7 @@ import SlideImg5 from "../../assets/tt (5).png";
 import SlideImg6 from "../../assets/tt (6).png";
 import SlideImg7 from "../../assets/tt (7).png";
 import SlideImg8 from "../../assets/tt (8).png";
+import SlideImg9 from "../../assets/tt (9).png";
 import Client1 from "../../assets/clients/client1.png";
 import Client2 from "../../assets/clients/client2.png";
 import Client3 from "../../assets/clients/client3.png";
@@ -24,8 +25,6 @@ import Secure from "../../assets/icons/secure-payment.png";
 import Quality from "../../assets/icons/quality-assurance.png";
 import Certified from "../../assets/icons/certified.png";
 import { FcApproval } from "react-icons/fc";
-// import { Link } from 'react-router-dom';
-// import { FcCollaboration } from "react-icons/fc";
 import Bkc from "../../assets/bkc.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -48,8 +47,6 @@ import Paa14 from "../../assets/Hoodie/p (8).jpg";
 import Paa15 from "../../assets/Hoodie/p (8).png";
 import { BsStarFill } from "react-icons/bs";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
-
-// import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
 function useElementOnScreen(ref, rootMargin = "0px") {
@@ -311,6 +308,11 @@ const items = [
     title: "School Uniform",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
+  {
+    imgSrc: SlideImg9,
+    title: "ZP @ Lowest Cost",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
 ];
 function HomePage() {
   const settings2 = {
@@ -377,21 +379,21 @@ function HomePage() {
           </div>
         </h1>
       </div>
-      <div className="container whole">
+      <div className=" whole">
         <section className="section-2">
           <img
             src={Trust}
             alt="trust"
             width="60"
-            style={{ marginRight: "15px" }}
+            
           />
           MEET OUR SCHOOL UNIFORM PROGRAMME, SCHOOL ADMINS!{" "}
-          <button className="btn">CLICK HERE FOR CATALOGUE</button>
+          <Link to="/catalogue"><button className="btn">CLICK HERE FOR CATALOGUE</button></Link>
         </section>
 
         <div>
           <h3 className="cat">Our Uniform Categories</h3>
-          <div className="shop container shop-1">
+          <div className="shop  shop-1">
             <Slider {...settings}>
               {items.map((item) => (
                 <div key={item.title}>
@@ -401,7 +403,7 @@ function HomePage() {
                     </Link>
                     <div className="card-body">
                       <h5 className="card-title">{item.title}</h5>
-                      {/* <p className="card-text">{item.description}</p> */}
+                     
                     </div>
                   </div>
                 </div>

@@ -1,3 +1,7 @@
+.outer-div {
+    margin-top: 150px;
+}
+
 .product-main {
     margin: auto;
     max-width: 1440px;
@@ -8,7 +12,7 @@
     }
     .all-product {
         // font-family: DM Sans;
-        font-size: 34px;
+        font-size: 24px;
         font-weight: 400;
         line-height: 44px;
         letter-spacing: 0.25px;
@@ -16,10 +20,11 @@
         color: #626262;
     }
     .row1 {
+        display: flex;
         .col1 {
             .each-card {
                 margin: 15px;
-                width: 320px;
+                max-width: 320px;
                 height: auto;
                 .heart-icon {
                     font-size: 18px;
@@ -87,7 +92,7 @@
                     line-height: 12px;
                     letter-spacing: 0em;
                     text-align: right;
-                    color: #bc7d6a;
+                    color: #0d6efd;
                     text-align: center;
                     text-decoration: none;
                 }
@@ -133,12 +138,20 @@
                 width: 277px;
                 border-radius: 20px;
                 padding: 12px 24px 12px 24px;
+                border: 2px solid lightgray;
+                // background-color: rgb(57, 138, 57);
                 // font-family: Proxima Nova;
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 19px;
+                // color: #fff;
                 letter-spacing: 1.600000023841858px;
                 text-align: center;
+                transition: background-color 0.3s ease-in-out;
+                &:hover {
+                    background-color: #626262;
+                    color: #fff;
+                }
             }
             .bottom-col-1 {
                 justify-content: center;
@@ -148,7 +161,10 @@
         }
         .col2 {
             color: #626262;
-            min-width: 85px;
+            min-width: 155px;
+            .form-check-input:hover {
+                cursor: pointer;
+            }
             .filters-tag {
                 font-size: 20px;
                 font-weight: 500;
@@ -170,7 +186,7 @@
                 padding-bottom: 8px;
                 label {
                     //   font-family: Proxima Nova;
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 400;
                     line-height: 24px;
                     letter-spacing: 0em;
@@ -229,11 +245,18 @@
 }
 
 @media only screen and (max-width: 951px) {
-    .to-hide {
-        display: none;
+    .all-product {
+        font-size: 24px !important;
     }
     .product-main {
         padding: 20px;
+        .row1 {
+            .col1 {
+                .each-card {
+                    margin: auto !important;
+                }
+            }
+        }
     }
     .all-sofas {
         //styleName: 24;
@@ -282,36 +305,10 @@
     }
 }
 
-// @media only screen and (max-width: 780px) {
-//     .col1 {
-//         .grid-container {
-//             display: flex !important;
-//             flex-direction: column !important;
-//             .grid-item {
-//                 width: 100% !important;
-//                 height: auto !important;
-//                 margin: auto !important;
-//                 grid-template-columns: repeat(1, 1fr) !important;
-//             }
-//         }
-//     }
-//     .product-main {
-//         .grid-item {
-//             .each-card {
-//                 padding: 5px;
-//                 width: 100% !important;
-//                 img {
-//                     object-fit: contain !important;
-//                     width: 100% !important;
-//                 }
-//                 .heart-icon {
-//                     margin-left: 20px;
-//                 }
-//             }
-//         }
-//     }
-// }
 @media only screen and (max-width: 780px) {
+    .outer-div {
+        margin-top: 0px;
+    }
     .col1 {
         .grid-container {
             display: flex !important;
